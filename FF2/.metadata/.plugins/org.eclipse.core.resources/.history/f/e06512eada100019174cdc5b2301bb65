@@ -1,0 +1,121 @@
+package shop_management_system;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Items extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField txtIname;
+	private JTextField txtIid;
+	private JTextField txtDate;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Items frame = new Items();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Items() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 898, 410);
+		contentPane = new JPanel();
+		contentPane.setForeground(new Color(210, 105, 30));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(0, 139, 139));
+		panel.setBounds(0, 0, 886, 76);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblItem = new JLabel("Item");
+		lblItem.setBounds(394, 13, 153, 38);
+		lblItem.setForeground(new Color(135, 206, 235));
+		lblItem.setFont(new Font("Verdana", Font.BOLD, 30));
+		panel.add(lblItem);
+		
+		JLabel lblClose = new JLabel("Close");
+		lblClose.setBackground(new Color(240, 230, 140));
+		lblClose.setBounds(766, 21, 82, 31);
+		panel.add(lblClose);
+		lblClose.setForeground(new Color(255, 0, 0));
+		lblClose.setFont(new Font("Tahoma", Font.BOLD, 19));
+		
+		JLabel lblItemId = new JLabel("Item Id");
+		lblItemId.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblItemId.setBounds(51, 108, 167, 29);
+		contentPane.add(lblItemId);
+		
+		JLabel lblItemName = new JLabel("Item Name");
+		lblItemName.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblItemName.setBounds(51, 198, 167, 29);
+		contentPane.add(lblItemName);
+		
+		txtIname = new JTextField();
+		txtIname.setColumns(10);
+		txtIname.setBounds(230, 186, 316, 41);
+		contentPane.add(txtIname);
+		
+		txtIid = new JTextField();
+		txtIid.setColumns(10);
+		txtIid.setBounds(230, 97, 316, 41);
+		contentPane.add(txtIid);
+		
+		JLabel label_3 = new JLabel("Date");
+		label_3.setFont(new Font("Tahoma", Font.BOLD, 20));
+		label_3.setBounds(51, 296, 167, 29);
+		contentPane.add(label_3);
+		
+		txtDate = new JTextField();
+		txtDate.setColumns(10);
+		txtDate.setBounds(230, 284, 316, 41);
+		contentPane.add(txtDate);
+		
+		JButton button = new JButton("Save");
+		button.setForeground(new Color(0, 128, 0));
+		button.setFont(new Font("Tahoma", Font.BOLD, 30));
+		button.setBounds(639, 128, 167, 52);
+		contentPane.add(button);
+		
+		JButton button_1 = new JButton("Clear");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		button_1.setForeground(new Color(0, 128, 0));
+		button_1.setFont(new Font("Tahoma", Font.BOLD, 30));
+		button_1.setBounds(639, 248, 167, 52);
+		contentPane.add(button_1);
+	}
+}

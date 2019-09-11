@@ -1,0 +1,140 @@
+package shop_management_system;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JComboBox;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Update2 extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JPasswordField passwordField;
+	private JTextField textField_2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Update2 frame = new Update2();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Update2() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 771, 754);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 250, 205));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel label = new JLabel("Update User Information");
+		label.setForeground(new Color(148, 0, 211));
+		label.setFont(new Font("Sylfaen", Font.BOLD, 30));
+		label.setBounds(182, 27, 401, 91);
+		contentPane.add(label);
+		
+		JLabel label_1 = new JLabel("User Id");
+		label_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		label_1.setBounds(46, 143, 165, 43);
+		contentPane.add(label_1);
+		
+		JLabel label_2 = new JLabel("User Name");
+		label_2.setFont(new Font("Tahoma", Font.BOLD, 20));
+		label_2.setBounds(46, 238, 165, 43);
+		contentPane.add(label_2);
+		
+		JLabel label_3 = new JLabel("Password");
+		label_3.setFont(new Font("Tahoma", Font.BOLD, 20));
+		label_3.setBounds(46, 342, 165, 43);
+		contentPane.add(label_3);
+		
+		JLabel label_4 = new JLabel("Email");
+		label_4.setFont(new Font("Tahoma", Font.BOLD, 20));
+		label_4.setBounds(46, 430, 165, 43);
+		contentPane.add(label_4);
+		
+		JLabel label_5 = new JLabel("User Type");
+		label_5.setFont(new Font("Tahoma", Font.BOLD, 20));
+		label_5.setBounds(46, 520, 165, 43);
+		contentPane.add(label_5);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.BOLD, 18));
+		textField.setColumns(10);
+		textField.setBounds(210, 131, 431, 49);
+		contentPane.add(textField);
+		
+		textField_1 = new JTextField();
+		textField_1.setFont(new Font("Tahoma", Font.BOLD, 18));
+		textField_1.setColumns(10);
+		textField_1.setBounds(210, 226, 431, 49);
+		contentPane.add(textField_1);
+		
+		passwordField = new JPasswordField();
+		passwordField.setFont(new Font("Tahoma", Font.BOLD, 15));
+		passwordField.setBounds(210, 331, 431, 49);
+		contentPane.add(passwordField);
+		
+		textField_2 = new JTextField();
+		textField_2.setFont(new Font("Tahoma", Font.BOLD, 18));
+		textField_2.setColumns(10);
+		textField_2.setBounds(210, 418, 431, 49);
+		contentPane.add(textField_2);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setToolTipText("");
+		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		comboBox.setBackground(new Color(240, 255, 240));
+		comboBox.setBounds(210, 507, 428, 49);
+		contentPane.add(comboBox);
+		
+		JButton btnUpdate = new JButton("Update");
+		btnUpdate.setForeground(new Color(46, 139, 87));
+		btnUpdate.setFont(new Font("Tahoma", Font.BOLD, 30));
+		btnUpdate.setBounds(12, 611, 177, 63);
+		contentPane.add(btnUpdate);
+		
+		JButton btnClear = new JButton("Clear");
+		btnClear.setForeground(new Color(46, 139, 87));
+		btnClear.setFont(new Font("Tahoma", Font.BOLD, 30));
+		btnClear.setBounds(284, 611, 190, 63);
+		contentPane.add(btnClear);
+		
+		JButton btnClose = new JButton("Close");
+		btnClose.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
+		btnClose.setForeground(new Color(46, 139, 87));
+		btnClose.setFont(new Font("Tahoma", Font.BOLD, 30));
+		btnClose.setBounds(564, 611, 177, 63);
+		contentPane.add(btnClose);
+	}
+
+}

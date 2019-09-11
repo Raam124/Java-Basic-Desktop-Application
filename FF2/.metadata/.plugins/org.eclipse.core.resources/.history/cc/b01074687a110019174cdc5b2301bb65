@@ -1,0 +1,139 @@
+package shop_management_system;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Container;
+
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Category2 extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Category2 frame = new Category2();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	 private void Clear(Container cont)
+	    {
+	    	for(Component ctrl : cont.getComponents())
+	    	{
+	    		if(ctrl instanceof JTextField)
+	    		{
+	    			JTextField tb = (JTextField)ctrl;
+	    			tb.setText("");
+	    		}
+	    	}
+	    }
+	/**
+	 * Create the frame.
+	 */
+	public Category2() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 897, 427);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setLayout(null);
+		panel.setBackground(new Color(0, 139, 139));
+		panel.setBounds(0, 0, 886, 76);
+		contentPane.add(panel);
+		
+		JLabel label = new JLabel("Item");
+		label.setForeground(new Color(135, 206, 235));
+		label.setFont(new Font("Verdana", Font.BOLD, 30));
+		label.setBounds(356, 13, 153, 38);
+		panel.add(label);
+		
+		JLabel label_1 = new JLabel("Close");
+		label_1.setForeground(new Color(255, 215, 0));
+		label_1.setFont(new Font("Tahoma", Font.BOLD, 19));
+		label_1.setBackground(new Color(240, 230, 140));
+		label_1.setBounds(766, 21, 82, 31);
+		panel.add(label_1);
+		
+		JLabel label_2 = new JLabel("Category");
+		label_2.setFont(new Font("Tahoma", Font.BOLD, 20));
+		label_2.setBounds(46, 118, 167, 29);
+		contentPane.add(label_2);
+		
+		JLabel label_3 = new JLabel("Name Of Item");
+		label_3.setFont(new Font("Tahoma", Font.BOLD, 20));
+		label_3.setBounds(46, 208, 167, 29);
+		contentPane.add(label_3);
+		
+		JLabel label_4 = new JLabel("Date Of Item");
+		label_4.setFont(new Font("Tahoma", Font.BOLD, 20));
+		label_4.setBounds(46, 306, 167, 29);
+		contentPane.add(label_4);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField.setColumns(10);
+		textField.setBounds(225, 294, 316, 41);
+		contentPane.add(textField);
+		
+		textField_1 = new JTextField();
+		textField_1.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_1.setColumns(10);
+		textField_1.setBounds(225, 196, 316, 41);
+		contentPane.add(textField_1);
+		
+		textField_2 = new JTextField();
+		textField_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		textField_2.setColumns(10);
+		textField_2.setBounds(225, 107, 316, 41);
+		contentPane.add(textField_2);
+		
+		JButton button = new JButton("Save");
+		button.setForeground(new Color(0, 128, 0));
+		button.setFont(new Font("Tahoma", Font.BOLD, 30));
+		button.setBounds(658, 146, 167, 52);
+		contentPane.add(button);
+		
+		JButton btnClear = new JButton("Clear");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Container c = getContentPane();
+				Clear(c);
+			}
+		});
+		btnClear.setForeground(new Color(0, 128, 0));
+		btnClear.setFont(new Font("Tahoma", Font.BOLD, 30));
+		btnClear.setBounds(658, 266, 167, 52);
+		contentPane.add(btnClear);
+	}
+
+}
